@@ -1,5 +1,5 @@
 """
-ChainRadar — Alert Rule Evaluator (Use Case)
+WaspNet — Alert Rule Evaluator (Use Case)
 Pure function — evaluates wallet data against alert conditions.
 ARCH: No side effects, fully unit testable, TDD-first.
 """

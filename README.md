@@ -1,14 +1,14 @@
-# 🛰️ ChainRadar
+# 🛰️ WaspNet
 
-**Real-time onchain monitoring and smart alert system — PagerDuty for Solana.**
+**Real-time onchain monitoring and smart alert system for Solana. If something moves on-chain, WaspNet stings first.**
 
 Built for the Dune SIM Hackathon. Uses all 4 SIM endpoint types + webhooks for maximum Fulfillment score.
 
 ---
 
-## 🎯 What is ChainRadar?
+## 🎯 What is WaspNet?
 
-ChainRadar monitors Solana wallets in real-time and triggers smart alerts when specific conditions are met. Think PagerDuty, but for blockchain.
+WaspNet monitors Solana wallets in real-time and triggers smart alerts when specific conditions are met. Think PagerDuty, but for blockchain.
 
 **Target Users:**
 - 🛡️ **Protocol Teams** — "Alert me if there's a liquidity drain from my pool"
@@ -17,7 +17,7 @@ ChainRadar monitors Solana wallets in real-time and triggers smart alerts when s
 
 ## ⚡ Dune SIM Integration
 
-ChainRadar uses **all 4 Dune SIM endpoint types**:
+WaspNet uses **all 4 Dune SIM endpoint types**:
 
 | Endpoint | Usage |
 |----------|-------|
@@ -45,8 +45,8 @@ User → Next.js Frontend → FastAPI Backend → Dune SIM API
 
 ### 1. Clone & Setup
 ```bash
-git clone https://github.com/your-username/chainradar.git
-cd chainradar
+git clone https://github.com/your-username/waspnet.git
+cd waspnet
 cp .env.example .env
 # Edit .env with your API keys
 ```
@@ -100,7 +100,7 @@ pytest tests/ -v --cov=. --cov-report=term-missing
 ## 📁 Project Structure
 
 ```
-chainradar/
+waspnet/
 ├── apps/
 │   ├── web/              # Next.js 14 frontend
 │   │   ├── app/          # App Router pages

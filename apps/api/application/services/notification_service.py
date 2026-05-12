@@ -1,5 +1,5 @@
 """
-ChainRadar — Notification Service
+WaspNet — Notification Service
 Delivers alerts via Telegram, Email, and In-App SSE.
 ARCH: Each channel has its own delivery method with idempotency.
 """
@@ -99,7 +99,7 @@ class NotificationService:
             r = resend.Emails.send({
                 "from": settings.resend_from_email,
                 "to": email,
-                "subject": f"[ChainRadar {severity}] Alert for wallet {wallet}...",
+                "subject": f"[WaspNet {severity}] Alert for wallet {wallet}...",
                 "html": self._format_email_html(alert_data),
             })
             return {"email_id": r.get("id")}
@@ -130,7 +130,7 @@ class NotificationService:
                 webhook_url,
                 json=alert_data,
                 timeout=10.0,
-                headers={"User-Agent": "ChainRadar/1.0", "Content-Type": "application/json"},
+                headers={"User-Agent": "WaspNet/1.0", "Content-Type": "application/json"},
             )
             return {"webhook_status": response.status_code}
 
@@ -144,7 +144,7 @@ class NotificationService:
         emoji = {"CRITICAL": "🚨", "WARNING": "⚠️", "INFO": "ℹ️"}.get(severity, "📢")
 
         return (
-            f"{emoji} <b>ChainRadar {severity}</b>\n\n"
+            f"{emoji} <b>WaspNet {severity}</b>\n\n"
             f"📋 Rule: <b>{rule_name}</b>\n"
             f"👛 Wallet: <code>{wallet}</code>\n"
             f"📝 {summary}\n\n"
@@ -160,7 +160,7 @@ class NotificationService:
         return f"""
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: #0f172a; color: white; padding: 20px; border-radius: 12px 12px 0 0;">
-                <h1 style="margin: 0; font-size: 24px;">🛰️ ChainRadar Alert</h1>
+                <h1 style="margin: 0; font-size: 24px;">🛰️ WaspNet Alert</h1>
             </div>
             <div style="background: #1e293b; color: #e2e8f0; padding: 24px;">
                 <div style="background: {'#dc2626' if severity == 'CRITICAL' else '#eab308' if severity == 'WARNING' else '#3b82f6'};

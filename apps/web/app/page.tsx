@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Landing Page
+ * WaspNet — Landing Page
  * Premium hero section with radar animation and feature overview.
  */
 
@@ -23,7 +23,7 @@ export default function HomePage() {
               <div className="absolute top-1/2 left-1/2 w-1/2 h-0.5 bg-gradient-to-r from-radar-400 to-transparent origin-left -translate-y-1/2" />
             </div>
           </div>
-          <span className="text-xl font-bold text-white">ChainRadar</span>
+          <span className="text-xl font-bold text-white">WaspNet</span>
         </div>
         <div className="flex items-center gap-4">
           <Link href="/dashboard" className="btn-ghost text-sm">Dashboard</Link>
@@ -144,7 +144,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-surface-border/30 py-8 px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-white/30">
-          <span>© 2024 ChainRadar. Built for Dune SIM Hackathon.</span>
+          <span>© 2024 WaspNet. Built for Dune SIM Hackathon.</span>
           <div className="flex gap-4">
             <a href="https://github.com" className="hover:text-white/60 transition-colors">GitHub</a>
             <a href="https://docs.dune.com" className="hover:text-white/60 transition-colors">Dune Docs</a>

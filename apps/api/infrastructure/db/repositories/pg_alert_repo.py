@@ -1,5 +1,5 @@
 """
-ChainRadar — PostgreSQL Alert Rule Repository Implementation
+WaspNet — PostgreSQL Alert Rule Repository Implementation
 """
 
 from datetime import datetime

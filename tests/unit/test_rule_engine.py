@@ -1,5 +1,5 @@
 """
-ChainRadar — Unit Tests: Rule Engine
+WaspNet — Unit Tests: Rule Engine
 TDD tests for alert condition evaluation.
 """
 

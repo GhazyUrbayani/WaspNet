@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Login Page
+ * WaspNet — Login Page
  */
 
 'use client';
@@ -48,7 +48,7 @@ export default function LoginPage() {
             <div className="absolute inset-0 bg-radar-500 rounded-full opacity-40" />
             <div className="absolute inset-1 bg-radar-400 rounded-full" />
           </div>
-          <span className="text-xl font-bold">ChainRadar</span>
+          <span className="text-xl font-bold">WaspNet</span>
         </div>
 
         <h1 className="text-2xl font-bold text-center mb-2">

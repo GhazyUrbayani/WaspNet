@@ -1,5 +1,5 @@
 """
-ChainRadar — Repository Interfaces (Abstract Base Classes)
+WaspNet — Repository Interfaces (Abstract Base Classes)
 Domain-layer contracts for data access. Infrastructure layer implements these.
 """
 

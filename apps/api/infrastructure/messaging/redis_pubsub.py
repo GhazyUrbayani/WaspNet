@@ -1,5 +1,5 @@
 """
-ChainRadar — Redis Pub/Sub for Event-Driven Architecture
+WaspNet — Redis Pub/Sub for Event-Driven Architecture
 ARCH: SIM webhook → Redis pub/sub → notification workers.
 """
 
@@ -15,9 +15,9 @@ settings = get_settings()
 logger = structlog.get_logger()
 
 # Channel names
-CHANNEL_WALLET_EVENT = "chainradar:events:wallet"
-CHANNEL_ALERT_TRIGGER = "chainradar:events:alert"
-CHANNEL_NOTIFICATION = "chainradar:events:notification"
+CHANNEL_WALLET_EVENT = "waspnet:events:wallet"
+CHANNEL_ALERT_TRIGGER = "waspnet:events:alert"
+CHANNEL_NOTIFICATION = "waspnet:events:notification"
 
 
 class RedisPubSub:

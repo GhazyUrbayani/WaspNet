@@ -1,5 +1,5 @@
 """
-ChainRadar Domain Entities — Alert Rule
+WaspNet Domain Entities — Alert Rule
 Defines conditions for triggering alerts on wallet activity.
 """
 

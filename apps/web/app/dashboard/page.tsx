@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Dashboard Page
+ * WaspNet — Dashboard Page
  * Main watchlist overview with wallet cards, live indicators, and alert feed.
  */
 
@@ -75,7 +75,7 @@ export default function DashboardPage() {
               <div className="absolute inset-0 bg-radar-500 rounded-full opacity-40" />
               <div className="absolute inset-1 bg-radar-400 rounded-full" />
             </div>
-            <span className="text-lg font-bold">ChainRadar</span>
+            <span className="text-lg font-bold">WaspNet</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -98,8 +98,8 @@ export default function DashboardPage() {
 
             <button className="btn-ghost text-sm" onClick={() => {
               if (typeof window !== 'undefined') {
-                localStorage.removeItem('chainradar_access_token');
-                localStorage.removeItem('chainradar_refresh_token');
+                localStorage.removeItem('waspnet_access_token');
+                localStorage.removeItem('waspnet_refresh_token');
                 window.location.href = '/login';
               }
             }}>

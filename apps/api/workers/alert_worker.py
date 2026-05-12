@@ -1,5 +1,5 @@
 """
-ChainRadar — Celery Alert Worker
+WaspNet — Celery Alert Worker
 Background task processor for alert evaluation and delivery.
 ARCH: Consumes Redis events, evaluates rules, delivers notifications.
 """
@@ -11,7 +11,7 @@ settings = get_settings()
 
 # Initialize Celery with Redis as broker and backend
 celery_app = Celery(
-    "chainradar",
+    "waspnet",
     broker=settings.redis_url,
     backend=settings.redis_url,
 )
@@ -29,7 +29,7 @@ celery_app.conf.update(
 
 
 @celery_app.task(
-    name="chainradar.evaluate_and_notify",
+    name="waspnet.evaluate_and_notify",
     bind=True,
     max_retries=3,
     default_retry_delay=5,

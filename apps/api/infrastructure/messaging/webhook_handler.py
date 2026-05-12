@@ -1,5 +1,5 @@
 """
-ChainRadar — SIM Webhook Handler
+WaspNet — SIM Webhook Handler
 Receives real-time push events from Dune SIM and publishes to Redis.
 SIM: POST /webhooks/subscribe callback endpoint.
 """

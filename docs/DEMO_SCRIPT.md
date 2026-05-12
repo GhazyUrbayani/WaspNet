@@ -1,4 +1,4 @@
-# ChainRadar — DEMO SCRIPT
+# WaspNet — DEMO SCRIPT
 
 ## 90-Second Demo Sequence for Dune SIM Judges
 
@@ -18,7 +18,7 @@
 ### Demo Flow (90 seconds)
 
 #### [0:00 - 0:15] Introduction + Problem Statement
-- **Say:** "ChainRadar is PagerDuty for Solana — real-time onchain monitoring powered entirely by Dune SIM."
+- **Say:** "WaspNet is PagerDuty for Solana — real-time onchain monitoring powered entirely by Dune SIM."
 - **Show:** Landing page with radar animation
 - **Click:** "Start Monitoring" → Login/Register
 
@@ -53,7 +53,7 @@
 - **Point out:** "From SIM webhook to Telegram notification — under 2 seconds. No polling."
 
 #### [1:25 - 1:30] Closing
-- **Say:** "4 SIM endpoints, real-time webhooks, multi-channel alerts. ChainRadar — because you shouldn't learn about a drain from Twitter."
+- **Say:** "4 SIM endpoints, real-time webhooks, multi-channel alerts. WaspNet — because you shouldn't learn about a drain from Twitter."
 
 ---
 

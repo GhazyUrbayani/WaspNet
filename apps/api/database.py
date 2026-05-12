@@ -1,5 +1,5 @@
 """
-ChainRadar Database Engine & Session Management
+WaspNet Database Engine & Session Management
 Async SQLAlchemy setup with connection pooling.
 """
 

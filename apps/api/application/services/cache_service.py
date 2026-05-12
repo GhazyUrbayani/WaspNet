@@ -1,5 +1,5 @@
 """
-ChainRadar — Redis Cache Service
+WaspNet — Redis Cache Service
 Caching layer for SIM API responses with TTL strategy.
 ARCH: balances cached 30s, transactions 5min — as specified.
 """
@@ -44,7 +44,7 @@ class CacheService:
 
     def _key(self, namespace: str, identifier: str) -> str:
         """Generate namespaced cache key."""
-        return f"chainradar:{namespace}:{identifier}"
+        return f"waspnet:{namespace}:{identifier}"
 
     async def get(self, namespace: str, identifier: str) -> Optional[Dict[str, Any]]:
         """Get cached data by namespace and identifier."""

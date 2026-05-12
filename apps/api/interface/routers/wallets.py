@@ -1,5 +1,5 @@
 """
-ChainRadar — Wallets Router
+WaspNet — Wallets Router
 CRUD operations for wallet watchlist management.
 """
 

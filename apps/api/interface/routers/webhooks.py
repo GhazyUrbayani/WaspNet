@@ -1,5 +1,5 @@
 """
-ChainRadar — Webhook Router
+WaspNet — Webhook Router
 SIM: Receives real-time push events from Dune SIM webhooks.
 """
 

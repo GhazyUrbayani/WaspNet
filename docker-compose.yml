@@ -4,18 +4,18 @@ services:
   # PostgreSQL database
   db:
     image: postgres:16-alpine
-    container_name: chainradar-db
+    container_name: waspnet-db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-chainradar}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-chainradar_dev}
-      POSTGRES_DB: ${POSTGRES_DB:-chainradar}
+      POSTGRES_USER: ${POSTGRES_USER:-waspnet}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-waspnet_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-waspnet}
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U chainradar"]
+      test: ["CMD-SHELL", "pg_isready -U waspnet"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -23,7 +23,7 @@ services:
   # Redis for caching, pub/sub, rate limiting
   redis:
     image: redis:7-alpine
-    container_name: chainradar-redis
+    container_name: waspnet-redis
     restart: unless-stopped
     command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
     ports:
@@ -41,12 +41,12 @@ services:
     build:
       context: ./apps/api
       dockerfile: Dockerfile
-    container_name: chainradar-api
+    container_name: waspnet-api
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-chainradar}:${POSTGRES_PASSWORD:-chainradar_dev}@db:5432/${POSTGRES_DB:-chainradar}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-waspnet}:${POSTGRES_PASSWORD:-waspnet_dev}@db:5432/${POSTGRES_DB:-waspnet}
       - REDIS_URL=redis://redis:6379/0
     ports:
       - "8000:8000"
@@ -64,12 +64,12 @@ services:
     build:
       context: ./apps/api
       dockerfile: Dockerfile
-    container_name: chainradar-worker
+    container_name: waspnet-worker
     restart: unless-stopped
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-chainradar}:${POSTGRES_PASSWORD:-chainradar_dev}@db:5432/${POSTGRES_DB:-chainradar}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-waspnet}:${POSTGRES_PASSWORD:-waspnet_dev}@db:5432/${POSTGRES_DB:-waspnet}
       - REDIS_URL=redis://redis:6379/0
     depends_on:
       db:
@@ -85,7 +85,7 @@ services:
     build:
       context: ./apps/web
       dockerfile: Dockerfile
-    container_name: chainradar-web
+    container_name: waspnet-web
     restart: unless-stopped
     env_file:
       - .env

@@ -1,5 +1,5 @@
 """
-ChainRadar — Auth Middleware
+WaspNet — Auth Middleware
 FastAPI dependency for JWT token validation.
 SEC: Extracts and validates Bearer token from Authorization header.
 """

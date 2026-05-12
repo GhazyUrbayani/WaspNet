@@ -1,5 +1,5 @@
 """
-ChainRadar — Unit Tests: SIM Client
+WaspNet — Unit Tests: SIM Client
 Tests for Dune SIM API client with mocked responses.
 """
 

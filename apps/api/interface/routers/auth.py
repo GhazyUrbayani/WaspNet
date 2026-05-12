@@ -1,5 +1,5 @@
 """
-ChainRadar — Auth Router
+WaspNet — Auth Router
 Handles user registration, login, and token refresh.
 """
 

@@ -1,5 +1,5 @@
 """
-ChainRadar — Alerts Router
+WaspNet — Alerts Router
 CRUD for alert rules + alert history.
 """
 

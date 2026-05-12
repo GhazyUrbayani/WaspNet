@@ -1,5 +1,5 @@
 """
-ChainRadar Configuration Module
+WaspNet Configuration Module
 Centralized settings using pydantic-settings for validation.
 """
 
@@ -20,13 +20,13 @@ class Settings(BaseSettings):
     )
 
     # --- App ---
-    app_name: str = "ChainRadar"
+    app_name: str = "WaspNet"
     app_env: str = "development"
     app_debug: bool = False
     log_level: str = "INFO"
 
     # --- Database ---
-    database_url: str = "postgresql+asyncpg://chainradar:chainradar_dev@localhost:5432/chainradar"
+    database_url: str = "postgresql+asyncpg://waspnet:waspnet_dev@localhost:5432/waspnet"
 
     # --- Redis ---
     redis_url: str = "redis://localhost:6379/0"
@@ -48,7 +48,7 @@ class Settings(BaseSettings):
 
     # --- Email (Resend) ---
     resend_api_key: str = ""
-    resend_from_email: str = "alerts@chainradar.xyz"
+    resend_from_email: str = "alerts@waspnet.xyz"
 
     # --- CORS ---
     cors_origins: str = "http://localhost:3000"

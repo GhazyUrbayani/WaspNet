@@ -1,5 +1,5 @@
 """
-ChainRadar — PostgreSQL Wallet Repository Implementation
+WaspNet — PostgreSQL Wallet Repository Implementation
 Implements WalletRepository interface using SQLAlchemy async.
 """
 

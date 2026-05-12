@@ -1,5 +1,5 @@
 """
-ChainRadar — Circuit Breaker Pattern
+WaspNet — Circuit Breaker Pattern
 Prevents cascading failures when Dune SIM API is down.
 ARCH: States: CLOSED (normal) → OPEN (blocking) → HALF_OPEN (testing).
 """

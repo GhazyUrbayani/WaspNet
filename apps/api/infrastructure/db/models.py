@@ -1,5 +1,5 @@
 """
-ChainRadar — SQLAlchemy ORM Models
+WaspNet — SQLAlchemy ORM Models
 Database models for PostgreSQL persistence.
 """
 

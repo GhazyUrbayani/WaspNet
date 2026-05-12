@@ -1,5 +1,5 @@
 """
-ChainRadar — JWT Authentication Service
+WaspNet — JWT Authentication Service
 Handles token creation, verification, and password hashing.
 SEC: Short-lived access tokens (15min) + refresh tokens (7d).
 """

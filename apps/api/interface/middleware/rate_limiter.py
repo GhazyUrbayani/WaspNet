@@ -1,5 +1,5 @@
 """
-ChainRadar — Rate Limiter Middleware
+WaspNet — Rate Limiter Middleware
 Implements 4 rate limiting algorithms using Redis + Lua scripts.
 
 Algorithms:

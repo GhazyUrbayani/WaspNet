@@ -1,4 +1,4 @@
-# ChainRadar — Security Documentation
+# WaspNet — Security Documentation
 
 ## Threat Model (STRIDE)
 

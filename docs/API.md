@@ -1,8 +1,8 @@
-# ChainRadar — API Documentation
+# WaspNet — API Documentation
 
 ## Base URL
 - Development: `http://localhost:8000`
-- Production: `https://api.chainradar.xyz`
+- Production: `https://api.waspnet.xyz`
 
 ## Authentication
 All authenticated endpoints require a Bearer token in the Authorization header:
@@ -21,7 +21,7 @@ Liveness probe — is the process running?
 
 **Response:** `200 OK`
 ```json
-{ "status": "alive", "service": "chainradar-api" }
+{ "status": "alive", "service": "waspnet-api" }
 ```
 
 #### GET /health/ready
@@ -182,9 +182,9 @@ Server-Sent Events stream for real-time notifications. 🔒 Auth required.
 
 ## Dune SIM API Usage
 
-ChainRadar uses all 4 SIM endpoint types:
+WaspNet uses all 4 SIM endpoint types:
 
-| SIM Endpoint | ChainRadar Usage | Cache TTL |
+| SIM Endpoint | WaspNet Usage | Cache TTL |
 |-------------|------------------|-----------|
 | `GET /v1/solana/balances/{address}` | Dashboard wallet balance | 30s |
 | `GET /v1/solana/transactions/{address}` | Transaction feed | 5min |

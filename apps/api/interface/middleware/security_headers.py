@@ -1,5 +1,5 @@
 """
-ChainRadar — Security Headers Middleware
+WaspNet — Security Headers Middleware
 SEC: Applies security headers to all responses (OWASP best practices).
 """
 

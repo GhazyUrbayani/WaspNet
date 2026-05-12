@@ -1,5 +1,5 @@
 /**
- * ChainRadar — SSE Alert Stream Hook
+ * WaspNet — SSE Alert Stream Hook
  * Connects to the backend SSE endpoint for real-time alert notifications.
  */
 
@@ -39,7 +39,7 @@ export function useAlertStream(options: UseAlertStreamOptions = {}) {
   const connect = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const token = localStorage.getItem('chainradar_access_token');
+    const token = localStorage.getItem('waspnet_access_token');
     if (!token) return;
 
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';

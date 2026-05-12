@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Wallet Data Hook
+ * WaspNet — Wallet Data Hook
  * TanStack Query wrapper for SIM data with stale-while-revalidate.
  */
 
@@ -11,7 +11,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 async function fetchWithAuth<T>(path: string): Promise<T> {
   const token = typeof window !== 'undefined' 
-    ? localStorage.getItem('chainradar_access_token') 
+    ? localStorage.getItem('waspnet_access_token') 
     : null;
 
   const res = await fetch(`${API_BASE}${path}`, {

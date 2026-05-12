@@ -1,5 +1,5 @@
 """
-ChainRadar — Dune SIM API Client
+WaspNet — Dune SIM API Client
 Async HTTP client with circuit breaker, retry backoff, and timeout.
 
 SIM: All 4 endpoint types used:
@@ -59,7 +59,7 @@ class SIMClient:
                 headers={
                     "X-Sim-Api-Key": settings.sim_api_key,
                     "Content-Type": "application/json",
-                    "User-Agent": "ChainRadar/1.0",
+                    "User-Agent": "WaspNet/1.0",
                 },
                 timeout=httpx.Timeout(5.0),  # SIM: 5s timeout as specified
             )
@@ -167,7 +167,7 @@ class SIMClient:
         """
         SIM: POST /webhooks/subscribe
         Subscribe to real-time push events for a wallet address.
-        This is the KILLER differentiator for ChainRadar.
+        This is the KILLER differentiator for WaspNet.
         """
         if event_types is None:
             event_types = ["transfer", "token_transfer", "program_interaction"]

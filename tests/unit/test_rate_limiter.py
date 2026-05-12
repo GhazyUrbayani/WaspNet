@@ -1,5 +1,5 @@
 """
-ChainRadar — Unit Tests: Rate Limiter
+WaspNet — Unit Tests: Rate Limiter
 Tests all 4 rate limiting algorithms.
 """
 

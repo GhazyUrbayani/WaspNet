@@ -1,5 +1,5 @@
 /**
- * ChainRadar — API Client
+ * WaspNet — API Client
  * Typed wrapper for Next.js → FastAPI backend communication.
  * SIM: Data flows through backend which calls Dune SIM API.
  */
@@ -79,14 +79,14 @@ export interface Transaction {
 
 // ─── API Client ─────────────────────────────────────────────
 
-class ChainRadarAPI {
+class WaspNetAPI {
   private accessToken: string | null = null;
   private refreshToken: string | null = null;
 
   constructor() {
     if (typeof window !== 'undefined') {
-      this.accessToken = localStorage.getItem('chainradar_access_token');
-      this.refreshToken = localStorage.getItem('chainradar_refresh_token');
+      this.accessToken = localStorage.getItem('waspnet_access_token');
+      this.refreshToken = localStorage.getItem('waspnet_refresh_token');
     }
   }
 
@@ -131,8 +131,8 @@ class ChainRadarAPI {
     this.accessToken = tokens.access_token;
     this.refreshToken = tokens.refresh_token;
     if (typeof window !== 'undefined') {
-      localStorage.setItem('chainradar_access_token', tokens.access_token);
-      localStorage.setItem('chainradar_refresh_token', tokens.refresh_token);
+      localStorage.setItem('waspnet_access_token', tokens.access_token);
+      localStorage.setItem('waspnet_refresh_token', tokens.refresh_token);
     }
   }
 
@@ -140,8 +140,8 @@ class ChainRadarAPI {
     this.accessToken = null;
     this.refreshToken = null;
     if (typeof window !== 'undefined') {
-      localStorage.removeItem('chainradar_access_token');
-      localStorage.removeItem('chainradar_refresh_token');
+      localStorage.removeItem('waspnet_access_token');
+      localStorage.removeItem('waspnet_refresh_token');
     }
   }
 
@@ -240,4 +240,4 @@ export class APIError extends Error {
 }
 
 // Singleton
-export const api = new ChainRadarAPI();
+export const api = new WaspNetAPI();

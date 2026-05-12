@@ -1,5 +1,5 @@
 """
-ChainRadar — SIM Service
+WaspNet — SIM Service
 Orchestrates Dune SIM API calls with caching layer.
 SIM: All data reads go through this service → cache → SIM API.
 """

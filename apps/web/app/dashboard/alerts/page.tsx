@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Alert Rules Page
+ * WaspNet — Alert Rules Page
  * Create, manage, and monitor alert rules.
  */
 
@@ -64,7 +64,7 @@ export default function AlertRulesPage() {
               <div className="absolute inset-0 bg-radar-500 rounded-full opacity-40" />
               <div className="absolute inset-1 bg-radar-400 rounded-full" />
             </div>
-            <span className="text-lg font-bold">ChainRadar</span>
+            <span className="text-lg font-bold">WaspNet</span>
           </div>
           <nav className="flex items-center gap-1">
             <Link href="/dashboard" className="px-4 py-2 rounded-lg hover:bg-white/5 text-white/60 text-sm font-medium transition-colors">

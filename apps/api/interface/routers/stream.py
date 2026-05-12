@@ -1,5 +1,5 @@
 """
-ChainRadar — SSE Stream Router
+WaspNet — SSE Stream Router
 Server-Sent Events for real-time in-app notifications.
 """
 

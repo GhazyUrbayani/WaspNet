@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ChainRadar — Real-time Onchain Monitoring',
+  title: 'WaspNet — Real-time Onchain Monitoring',
   description: 'PagerDuty for Solana. Monitor wallets, set smart alerts, get notified in real-time via Telegram, email, or in-app.',
   keywords: ['solana', 'blockchain', 'monitoring', 'alerts', 'defi', 'wallet tracker'],
   openGraph: {
-    title: 'ChainRadar — PagerDuty for Solana',
+    title: 'WaspNet — PagerDuty for Solana',
     description: 'Real-time onchain monitoring and smart alert system',
     type: 'website',
   },

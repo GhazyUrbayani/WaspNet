@@ -1,5 +1,5 @@
 """
-ChainRadar Domain Entities — Notification
+WaspNet Domain Entities — Notification
 Represents a delivered or pending alert notification.
 """
 

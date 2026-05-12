@@ -1,5 +1,5 @@
 """
-ChainRadar — FastAPI Main Application
+WaspNet — FastAPI Main Application
 Entry point with middleware, routers, health checks, and lifecycle events.
 """
 
@@ -22,19 +22,19 @@ logger = structlog.get_logger()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifecycle — startup and shutdown events."""
-    logger.info("ChainRadar starting", env=settings.app_env)
+    logger.info("WaspNet starting", env=settings.app_env)
 
     if not settings.is_production:
         await init_db()
         logger.info("Database tables created (dev mode)")
 
-    logger.info("ChainRadar ready", sim_configured=bool(settings.sim_api_key))
+    logger.info("WaspNet ready", sim_configured=bool(settings.sim_api_key))
     yield
-    logger.info("ChainRadar shutting down")
+    logger.info("WaspNet shutting down")
 
 
 app = FastAPI(
-    title="ChainRadar API",
+    title="WaspNet API",
     description="Real-time onchain monitoring and smart alert system for Solana",
     version="1.0.0",
     lifespan=lifespan,
@@ -68,7 +68,7 @@ app.include_router(stream.router, prefix="/api/v1")
 
 @app.get("/health/live", tags=["Health"])
 async def liveness():
-    return {"status": "alive", "service": "chainradar-api"}
+    return {"status": "alive", "service": "waspnet-api"}
 
 
 @app.get("/health/ready", tags=["Health"])
@@ -101,8 +101,8 @@ async def readiness():
 @app.get("/", tags=["Root"])
 async def root():
     return {
-        "name": "ChainRadar API",
+        "name": "WaspNet API",
         "version": "1.0.0",
-        "description": "Real-time onchain monitoring — PagerDuty for Solana",
+        "description": "Real-time onchain monitoring and smart alert system for Solana. If something moves on-chain, WaspNet stings first.",
         "docs": "/docs",
     }

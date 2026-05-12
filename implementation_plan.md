@@ -1,7 +1,7 @@
-# ChainRadar — Implementation Plan
+# WaspNet — Implementation Plan
 
 ## Overview
-Real-time onchain monitoring and smart alert system for Solana — "PagerDuty for blockchain."
+Real-time onchain monitoring and smart alert system for Solana. If something moves on-chain, WaspNet stings first.
 
 ## Phase Tracking
 

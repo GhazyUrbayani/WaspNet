@@ -1,5 +1,5 @@
 """
-ChainRadar Domain Entities — Wallet
+WaspNet Domain Entities — Wallet
 Core wallet entity for tracking monitored addresses.
 """
 

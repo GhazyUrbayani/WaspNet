@@ -1,5 +1,5 @@
 /**
- * ChainRadar — Wallet Detail Page
+ * WaspNet — Wallet Detail Page
  * Shows balance, transaction history, and alert rules for a specific wallet.
  * SIM: Uses all 3 GET endpoints for this view.
  */
@@ -43,7 +43,7 @@ export default function WalletDetailPage() {
               <div className="absolute inset-0 bg-radar-500 rounded-full opacity-40" />
               <div className="absolute inset-1 bg-radar-400 rounded-full" />
             </div>
-            <span className="text-lg font-bold">ChainRadar</span>
+            <span className="text-lg font-bold">WaspNet</span>
           </div>
         </div>
       </header>

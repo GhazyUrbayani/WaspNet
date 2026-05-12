@@ -1,8 +1,8 @@
-# ChainRadar Architecture
+# WaspNet Architecture
 
 ## Overview
 
-ChainRadar is a real-time onchain monitoring and smart alert system — "PagerDuty for Solana." It uses Dune SIM API as the core data layer for wallet balances, transactions, cross-chain activity, and real-time webhooks.
+WaspNet is a real-time onchain monitoring and smart alert system — "PagerDuty for Solana." It uses Dune SIM API as the core data layer for wallet balances, transactions, cross-chain activity, and real-time webhooks.
 
 ## C4 Model
 
@@ -10,27 +10,27 @@ ChainRadar is a real-time onchain monitoring and smart alert system — "PagerDu
 
 ```mermaid
 C4Context
-    title ChainRadar System Context
+    title WaspNet System Context
 
-    Person(user, "ChainRadar User", "Protocol team, DAO manager, or trader")
-    System(chainradar, "ChainRadar", "Real-time onchain monitoring and alert system")
+    Person(user, "WaspNet User", "Protocol team, DAO manager, or trader")
+    System(waspnet, "WaspNet", "Real-time onchain monitoring and alert system")
     System_Ext(dune_sim, "Dune SIM API", "Blockchain data provider - balances, transactions, webhooks")
     System_Ext(telegram, "Telegram Bot API", "Alert delivery via Telegram")
     System_Ext(resend, "Resend Email", "Alert delivery via email")
     System_Ext(solana, "Solana Blockchain", "Source of truth for onchain data")
 
-    Rel(user, chainradar, "Monitors wallets, configures alerts")
-    Rel(chainradar, dune_sim, "Fetches wallet data, subscribes to webhooks")
+    Rel(user, waspnet, "Monitors wallets, configures alerts")
+    Rel(waspnet, dune_sim, "Fetches wallet data, subscribes to webhooks")
     Rel(dune_sim, solana, "Indexes blockchain data")
-    Rel(chainradar, telegram, "Sends alert notifications")
-    Rel(chainradar, resend, "Sends email alerts")
+    Rel(waspnet, telegram, "Sends alert notifications")
+    Rel(waspnet, resend, "Sends email alerts")
 ```
 
 ### Level 2: Container Diagram
 
 ```mermaid
 C4Container
-    title ChainRadar Container Diagram
+    title WaspNet Container Diagram
 
     Person(user, "User")
 

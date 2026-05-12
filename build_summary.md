@@ -1,4 +1,4 @@
-# ChainRadar — Build Summary ✅
+# WaspNet — Build Summary ✅
 
 ## All 72 Files Generated Across 6 Phases
 
