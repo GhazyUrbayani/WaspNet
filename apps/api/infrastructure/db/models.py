@@ -126,7 +126,7 @@ class NotificationModel(Base):
     status = Column(String(20), default="pending")  # pending, delivered, failed, skipped
     # SEC: idempotency key prevents duplicate delivery
     idempotency_key = Column(String(100), unique=True, nullable=False)
-    metadata = Column(JSON, default={})
+    meta_data = Column(JSON, default={})
     delivered_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
