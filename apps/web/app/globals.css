@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 5%;
+    --foreground: 0 0% 95%;
+  }
+
+  body {
+    @apply bg-surface text-white antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-radar-500;
+  }
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-surface-card/80 backdrop-blur-xl border border-surface-border/50 rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Glowing border effect */
+  .glow-border {
+    @apply border border-radar-500/30;
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15), inset 0 0 15px rgba(99, 102, 241, 0.05);
+  }
+
+  /* Status dot */
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+  .status-dot.live {
+    @apply bg-accent-green;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+    animation: pulse 2s infinite;
+  }
+  .status-dot.warning {
+    @apply bg-accent-yellow;
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+  }
+  .status-dot.critical {
+    @apply bg-accent-red;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+    animation: pulse 1s infinite;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-radar-500 to-radar-600 hover:from-radar-400 hover:to-radar-500
+           text-white font-medium px-6 py-2.5 rounded-xl
+           transition-all duration-200 ease-out
+           shadow-lg shadow-radar-500/25 hover:shadow-radar-500/40
+           active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply bg-white/5 hover:bg-white/10 text-white/80 hover:text-white
+           font-medium px-4 py-2 rounded-xl
+           border border-white/10 hover:border-white/20
+           transition-all duration-200;
+  }
+
+  /* Input styles */
+  .input-dark {
+    @apply bg-surface-card border border-surface-border/60 rounded-xl
+           px-4 py-3 text-white placeholder-white/30
+           focus:border-radar-500/60 focus:ring-2 focus:ring-radar-500/20
+           outline-none transition-all duration-200;
+  }
+
+  /* Severity badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+  .badge-critical {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+  .badge-warning {
+    @apply bg-yellow-500/20 text-yellow-400 border border-yellow-500/30;
+  }
+  .badge-info {
+    @apply bg-blue-500/20 text-blue-400 border border-blue-500/30;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply bg-surface-border/30 rounded-lg animate-pulse;
+  }
+
+  /* Grid pattern background */
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Radar pulse animation for logo */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.radar-sweep {
+  animation: radar-sweep 3s linear infinite;
+}
